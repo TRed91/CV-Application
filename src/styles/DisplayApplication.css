@@ -1,0 +1,13 @@
+.display-information {
+    margin-left: 30px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+li {
+    list-style: none;
+}
