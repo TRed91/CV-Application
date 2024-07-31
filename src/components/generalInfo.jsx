@@ -27,38 +27,44 @@ export default function GeneralInformation({ onSubmit }) {
 
   if (show) {
     return (
-      <div className="general-info-fields">
-        <Field  label     = "First Name"
-                fieldType = "text"
-                fId       = "fname"
-                value     = {info.fname}
-                getVal    = {(val) => setInfo({ ...info, fname: val })} />
-  
-        <Field  label     = "Last Name"
-                fieldType = "text"
-                fId       = "lname"
-                value     = {info.lname}
-                getVal    = {(val) => setInfo({ ...info, lname: val })} />
-  
-        <Field  label     = "Phone Number"
-                fieldType = "tel"
-                fId       = "phone"
-                value     = {info.phone}
-                getVal    = {(val) => setInfo({ ...info, phone: val })} />
-  
-        <Field  label     = "Email"
-                fieldType = "email"
-                fId       = "mail"
-                value     = {info.mail}
-                getVal    = {(val) => setInfo({ ...info, mail: val })} />
-        <div>
-          <button>Edit</button>
+      <div>
+        <div className="info-fields-container">
+          <h3>Edit general information</h3>
+          <Field  label     = "First Name"
+                  fieldType = "text"
+                  fId       = "fname"
+                  value     = {info.fname}
+                  getVal    = {(val) => setInfo({ ...info, fname: val })} />
+    
+          <Field  label     = "Last Name"
+                  fieldType = "text"
+                  fId       = "lname"
+                  value     = {info.lname}
+                  getVal    = {(val) => setInfo({ ...info, lname: val })} />
+    
+          <Field  label     = "Phone Number"
+                  fieldType = "tel"
+                  fId       = "phone"
+                  value     = {info.phone}
+                  getVal    = {(val) => setInfo({ ...info, phone: val })} />
+    
+          <Field  label     = "Email"
+                  fieldType = "email"
+                  fId       = "mail"
+                  value     = {info.mail}
+                  getVal    = {(val) => setInfo({ ...info, mail: val })} />
+          
           <button onClick={handleSubmit}>Submit</button>
         </div>
       </div>
     )
   } else {
-    return <button onClick={() => setShow(true)}>Edit</button>
+    return (
+      <div className="info-fields-container">
+        <h3>Edit general information</h3>
+        <button onClick={() => setShow(true)}>Edit</button>
+      </div>
+    )
   }
 
   
