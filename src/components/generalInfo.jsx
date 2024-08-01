@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '../styles/generalInfo.css'
+import '../styles/generalInfo.css';
 
 function Field({ label, fieldType, fId, value, getVal }) {
   const handleInput = (e) => {
